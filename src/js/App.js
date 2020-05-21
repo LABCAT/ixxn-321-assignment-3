@@ -1,12 +1,17 @@
 import React from 'react';
 
 import { GlobalContextProvider } from './context/Context';
-import Home from './page-types/Home';
+
+import Header from './layout/Header';
+import Main from './layout/Main';
+import Footer from './layout/Footer';
 
 function App() {
   return (
     <GlobalContextProvider>
-      <Home />
+      <Header />
+      <Main />
+      <Footer />
     </GlobalContextProvider>
   );
 }

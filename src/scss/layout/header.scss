@@ -1,3 +1,15 @@
-#site-header {
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
 
+    &-logo {
+        margin-right: auto;
+    }
+
+    &-nav {
+        a {
+            padding: 0 20px;
+        }
+    }
 }

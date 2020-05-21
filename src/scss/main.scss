@@ -3,6 +3,7 @@
 @import "./abstracts/variables";
 
 //base - all html elements
+@import "./base/_normalize";
 @import "./base/html";
 
 // components - search form, hamburger button etc 

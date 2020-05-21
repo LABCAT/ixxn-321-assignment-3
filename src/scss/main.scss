@@ -1,0 +1,19 @@
+//abstracts - custom functions, mixins and vairables
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+//base - all html elements
+@import "./base/html";
+
+// components - search form, hamburger button etc 
+ 
+//layout - to level layout of your website
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/main";
+
+// pages - styles for individual pages
+@import "./pages/home-page";
+
+// utils - styles to be applied globally
+@import "./utils/utilities";

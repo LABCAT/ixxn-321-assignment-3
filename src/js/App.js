@@ -1,9 +1,13 @@
 import React from 'react';
+
+import { GlobalContextProvider } from './context/Context';
 import Home from './page-types/Home';
 
 function App() {
   return (
-    <Home/>
+    <GlobalContextProvider>
+      <Home />
+    </GlobalContextProvider>
   );
 }
 

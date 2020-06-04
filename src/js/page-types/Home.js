@@ -8,5 +8,6 @@ export default function Home() {
         <h1>
             HOME PAGE: Current Alert Level is { alertLevel }
         </h1>
+        <h1>test</h1>
     );
 }

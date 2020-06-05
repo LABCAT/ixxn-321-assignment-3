@@ -14,6 +14,12 @@ export default function reducer(state, action) {
                 currentRegion: regionalCases[action.payload]
             }
         }
+        case "SET_CURRENT_SEARCH_QUERY": {
+            return {
+                ...state,
+                currentSearchQuery: action.payload
+            }
+        }
         default:
             throw new Error('Action type does not exist!')
     }

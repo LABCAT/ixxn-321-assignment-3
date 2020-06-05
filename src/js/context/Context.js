@@ -10,6 +10,10 @@ const initialState = {
         "Recovered": 1481,
         "Deceased": 22,
         "Total": 1504
+    },
+    currentSearchQuery: {
+        "keyword": '',
+        "category": ''
     }
 }
 
@@ -26,13 +30,19 @@ export const GlobalContextProvider = ({ children }) => {
         dispatch({ type: "SET_CURRENT_REGION", payload: region });
     }
 
+    const setSearchQuery = (query) => {
+        dispatch({ type: "SET_CURRENT_SEARCH_QUERY", payload: query });
+    }
+
     return <Context.Provider
         value={
             {
                 alertLevel: state.alertLevel,
                 currentRegion: state.currentRegion,
+                currentSearchQuery: state.currentSearchQuery,
                 setAlertLevel,
-                setRegion
+                setRegion,
+                setSearchQuery
             }
         }
     >

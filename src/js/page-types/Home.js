@@ -2,6 +2,7 @@ import React, { Fragment, useContext } from 'react'
 
 import { Context } from '../context/Context.js';
 import NZMap from '../components/NZMap.js';
+import SearchForm from '../components/SearchForm.js';
 
 export default function Home() {
     const { alertLevel, currentRegion } = useContext(Context);
@@ -12,6 +13,7 @@ export default function Home() {
             <h1>
                 HOME PAGE: Current Alert Level is {alertLevel}
             </h1>
+            <SearchForm/>
             <dl>
                 <dt>Current region selected</dt>
                 <dd>{Region}</dd>

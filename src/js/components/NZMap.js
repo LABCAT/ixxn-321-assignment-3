@@ -12,7 +12,7 @@ export default function NZMap() {
     };
 
     const calculatedFillColour = (region) => {
-        return (region === currentRegion) ? selectedRegionFillColour : fillColour;
+        return (region === currentRegion.Region) ? selectedRegionFillColour : fillColour;
     };
 
     return (

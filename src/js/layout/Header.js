@@ -1,12 +1,20 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import mainLogo from "../../images/mainDashboardLogo.png";
+
 
 export default function Header() {
     return (
         <header className='site-header'>
+           
             <Link to="/" className='site-header-logo'>
-                Logo goes here
+             <img
+                src={mainLogo}
+                className="logo-image"
+                alt="covid19 logo"
+             />
             </Link>
+        
             <nav className="site-header-nav">
                 <Link to="/">Home</Link>
                 <Link to="/page-1">Page 1</Link>

@@ -8,14 +8,16 @@
 
 // components - search form, hamburger button etc 
 @import "./components/nz-map";
+@import "./components/search-form";
 
-//layout - to level layout of your website
+//layout - top level layout of your website
 @import "./layout/footer";
 @import "./layout/header";
 @import "./layout/main";
 
 // pages - styles for individual pages
 @import "./pages/home-page";
+@import "./pages/search-results-page";
 
 // utils - styles to be applied globally
 @import "./utils/utilities";

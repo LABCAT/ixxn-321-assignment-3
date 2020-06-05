@@ -90,16 +90,6 @@ export default function NZMap() {
             </a>
             <a
                 href="/"
-                onClick={(e) => { e.preventDefault(); handleOnCLick("Nelson City") }}
-            >
-                <path 
-                    fill={calculatedFillColour("Nelson City")}
-                    name="Nelson City"
-                    d="M 570.9 708 l -2.8 -1.4 l -3 -2.8 l -1.6 -2.6 l -0.4 -1.3 l 0.7 -0.1 l 1.5 -0.7 l 2.8 -2.5 l 2.7 -1.7 l 1.3 -1.4 l 3 -4.2 l 4.8 -4.8 l 1.9 -0.8 l 0.9 -1.5 l 0.8 -0.3 l 0.4 0.3 l 0.1 0.8 l -0.3 0.9 l -0.2 0.8 l 2.6 -1.2 l 1.3 -0.8 l 1.1 -1.2 l 1.2 -2.4 l 0.6 -0.7 l 0.7 -0.1 l 0.7 0.5 l 0.6 0 l 0.7 -1.1 l -0.8 -1.1 l 0.7 -1.4 l 1.3 -1.2 l 0.2 -0.1 l 0 0.7 l 0 1.9 l -0.7 3.3 l -1.3 3.5 l -1.2 2 l -2.4 3.1 l -3.2 3.1 l -6.7 10.4 l -3.5 3.6 l -2.6 1.8 l -1.9 0.7 z">
-                </path>    
-            </a>
-            <a
-                href="/"
                 onClick={(e) => { e.preventDefault(); handleOnCLick("Tasman District")}}
             >
                 <path 

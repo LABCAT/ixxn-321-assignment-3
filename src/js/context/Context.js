@@ -4,7 +4,13 @@ import Reducer from "./Reducer";
 
 const initialState = {
     alertLevel: 2,
-    currentRegion: ''
+    currentRegion: {
+        "Region": "Nationwide",
+        "Active": 1,
+        "Recovered": 1481,
+        "Deceased": 22,
+        "Total": 1504
+    }
 }
 
 export const Context = createContext(initialState);

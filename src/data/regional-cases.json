@@ -1,0 +1,114 @@
+{
+    "Nationwide": {
+        "Region" : "Nationwide", 
+        "Active": 1,
+        "Recovered": 1481,
+        "Deceased": 22,
+        "Total": 1504
+    },
+    "Manawatu-Wanganui": {
+        "Region": "Manawatu-Wanganui",
+        "Active": 0,
+        "Recovered": 41,
+        "Deceased": 0,
+        "Total": 41
+    },
+    "Gisborne District": {
+        "Region": "Gisborne District",
+        "Active": 0,
+        "Recovered": 4,
+        "Deceased": 0,
+        "Total": 4
+    },
+    "Hawke's Bay": {
+        "Region": "Hawke's Bay",
+        "Active": 0,
+        "Recovered": 44,
+        "Deceased": 0,
+        "Total": 44
+    },
+    "Auckland": {
+        "Region": "Auckland",
+        "Active": 1,
+        "Recovered": 541,
+        "Deceased": 4,
+        "Total": 0
+    },
+    "Bay of Plenty": {
+        "Region": "Bay of Plenty",
+        "Active": 0,
+        "Recovered": 63,
+        "Deceased": 0,
+        "Total": 63
+    },
+    "Canterbury": {
+        "Region": "Canterbury",
+        "Active": 0,
+        "Recovered": 169,
+        "Deceased": 12,
+        "Total": 181
+    },
+    "Marlborough District": {
+        "Region": "Marlborough District",
+        "Active": 0,
+        "Recovered": 25,
+        "Deceased": 0,
+        "Total": 25
+    },
+    "Tasman District": {
+        "Region": "Tasman District",
+        "Active": 0,
+        "Recovered": 24,
+        "Deceased": 0,
+        "Total": 24
+    },
+    "Northland": {
+        "Region": "Northland",
+        "Active": 0,
+        "Recovered": 28,
+        "Deceased": 0,
+        "Total": 28
+    },
+    "Taranaki": {
+        "Region": "Taranaki",
+        "Active": 0,
+        "Recovered": 16,
+        "Deceased": 0,
+        "Total": 16
+    },
+    "West Coast": {
+        "Region": "West Coast",
+        "Active": 0,
+        "Recovered": 4,
+        "Deceased": 1,
+        "Total": 5
+    },
+    "Otago": {
+        "Region": "Otago",
+        "Active": 0,
+        "Recovered": 107,
+        "Deceased": 1,
+        "Total": 108
+    },
+    "Southland": {
+        "Region": "Southland",
+        "Active": 0,
+        "Recovered": 107,
+        "Deceased": 1,
+        "Total": 108
+    },
+    "Waikato": {
+        "Region": "Waikato",
+        "Active": 0,
+        "Recovered": 187,
+        "Deceased": 1,
+        "Total": 188
+    },
+    "Wellington": {
+        "Region": "Wellington",
+        "Active": 0,
+        "Recovered": 121,
+        "Deceased": 2,
+        "Total": 123
+    }
+}

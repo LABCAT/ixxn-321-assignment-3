@@ -1,3 +1,5 @@
+import regionalCases from "../../data/regional-cases";
+
 export default function reducer(state, action) {
     switch (action.type) {
         case "SET_ALERT_LEVEL": {
@@ -9,7 +11,7 @@ export default function reducer(state, action) {
         case "SET_CURRENT_REGION": {
             return {
                 ...state,
-                currentRegion: action.payload
+                currentRegion: regionalCases[action.payload]
             }
         }
         default:

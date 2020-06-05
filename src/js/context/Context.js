@@ -4,6 +4,7 @@ import Reducer from "./Reducer";
 
 const initialState = {
     alertLevel: 2,
+    currentRegion: ''
 }
 
 export const Context = createContext(initialState);
@@ -15,11 +16,17 @@ export const GlobalContextProvider = ({ children }) => {
         dispatch({ type: "SET_ALERT_LEVEL", payload: level });
     }
 
+    const setRegion = (region) => {
+        dispatch({ type: "SET_CURRENT_REGION", payload: region });
+    }
+
     return <Context.Provider
         value={
             {
                 alertLevel: state.alertLevel,
-                setAlertLevel
+                currentRegion: state.currentRegion,
+                setAlertLevel,
+                setRegion
             }
         }
     >

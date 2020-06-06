@@ -4,21 +4,24 @@ import { useHistory } from "react-router-dom";
 import { Context } from '../context/Context.js';
 import * as Constants from '../context/Constants.js';
 
-export default function SearchForm(props) {
+export default function SearchForm() {
     let history = useHistory();
     const { currentSearchQuery, setSearchQuery } = useContext(Context);
     const [keyword, setKeyword] = useState(currentSearchQuery.keyword);
     const [category, setCategory] = useState(currentSearchQuery.category);
+    const [hasBeenReset, resetKeyword] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        console.log(category);
+        
         setSearchQuery(
             {
                 "keyword": keyword,
-                "category": category
+                "category": category ? category : 'All'
             }
         );
-        const searchRoute = '/search/keyword=' + encodeURI(keyword) + '/category=' + encodeURI(category);
+        const searchRoute = '/search/keyword=' + encodeURI(keyword) + '/category=' + encodeURI(category ? category : 'All');
         history.push(searchRoute);
     };
 
@@ -31,7 +34,7 @@ export default function SearchForm(props) {
                 let updateKeyword = false;
                 let updateCategory = false;
 
-                if (!keyword && urlKeyword !== keyword) {
+                if (!keyword && urlKeyword !== keyword && !hasBeenReset) {
                     setKeyword(urlKeyword);
                     updateKeyword = true;
                 }
@@ -57,7 +60,20 @@ export default function SearchForm(props) {
     return (
         <form className="search-form" onSubmit={handleSubmit}>
             <label htmlFor="keyword">I WANT TO LEARN ABOUT</label>
-            <input type="text" name="keyword" onChange={event => setKeyword(event.target.value)} value={keyword} placeholder="Your keyword/s"/>
+            <input 
+                type="text" 
+                name="keyword" 
+                onChange={
+                    event => {
+                        if (!event.target.value){
+                            resetKeyword(true);
+                        }
+                        setKeyword(event.target.value);
+                    }
+                } 
+                value={keyword} 
+                placeholder="Your keyword/s"
+            />
             <label htmlFor="categories">IN</label>
             <select onChange={event => setCategory(event.target.value)} value={category}>
                 {

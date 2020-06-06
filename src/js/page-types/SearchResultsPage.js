@@ -1,7 +1,6 @@
-import React, {Fragment, useContext} from 'react'
+import React, {Fragment, useContext } from 'react'
 
 import SearchForm from '../components/SearchForm.js';
-
 import { Context } from '../context/Context.js';
 
 export default function SearchResultsPage() {
@@ -9,6 +8,7 @@ export default function SearchResultsPage() {
     const { keyword, category } = currentSearchQuery;
 
     let searchHeading = '';
+
     if(keyword || category) {
         searchHeading = 
         <Fragment>

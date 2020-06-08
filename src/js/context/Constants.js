@@ -12,10 +12,6 @@ export const categories = [
         "title": "Business"
     },
     {
-        "value": "Business",
-        "title": "Business"
-    },
-    {
         "value": "PPE",
         "title": "PPE"
     },

@@ -1,5 +1,4 @@
 import React, { useContext, useState, useCallback } from 'react';
-import { Transition } from 'react-spring/renderprops'
 
 import { Context } from '../context/Context.js';
 import NZMap from '../components/NZMap.js';

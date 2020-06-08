@@ -11,9 +11,7 @@ export default function Main() {
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/search" component={SearchResultsPage} />
-                <Route path="/page-1" component={Page} />
-                <Route path="/page-2" component={Page} />
-                <Route path="/page-3" component={Page} />
+                <Route  path="/page/:id" component={Page} />
             </Switch>
         </main>
     );

@@ -10,5 +10,25 @@ export const categories = [
     {
         "value": "Business",
         "title": "Business"
+    },
+    {
+        "value": "Business",
+        "title": "Business"
+    },
+    {
+        "value": "PPE",
+        "title": "PPE"
+    },
+    {
+        "value": "Levels",
+        "title": "Levels"
+    },
+    {
+        "value": "Finances",
+        "title": "Finances"
+    },
+    {
+        "value": "Childcare",
+        "title": "Childcare"
     }
 ];

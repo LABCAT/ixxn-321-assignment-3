@@ -3,9 +3,9 @@ import { Context } from '../context/Context.js';
 
 export default function NZMap() {
     const { setRegion, currentRegion } = useContext(Context);
-    const fillColour = "#7c7c7c";
-    const selectedRegionFillColour = "#333333";
-    const strokeColour = "#ffffff"; 
+    const fillColour = "#ffffff";
+    const selectedRegionFillColour = "#005D70";
+    const strokeColour = "#000000"; 
 
     const handleOnCLick = (region) => {
         setRegion(region);

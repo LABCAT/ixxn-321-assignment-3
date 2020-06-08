@@ -5,14 +5,11 @@ import NZMap from '../components/NZMap.js';
 import SearchForm from '../components/SearchForm.js';
 
 export default function Home() {
-    const { alertLevel, currentRegion } = useContext(Context);
+    const { currentRegion } = useContext(Context);
     const { Region, Active, Recovered, Deceased, Total } = currentRegion;
 
     return (
         <Fragment>
-            <h1>
-                HOME PAGE: Current Alert Level is {alertLevel}
-            </h1>
             <SearchForm/>
             <dl>
                 <dt>Current region selected</dt>

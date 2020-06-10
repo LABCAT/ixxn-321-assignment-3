@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import mainLogo from "../../images/mainDashboardLogo.png";
 // import mobileLogo from "../../image/mobileLogo.png";
 
-
-
 import { Context } from '../context/Context.js';
 
 export default function Header() {

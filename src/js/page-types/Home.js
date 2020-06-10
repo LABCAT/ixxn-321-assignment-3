@@ -4,6 +4,7 @@ import { Context } from '../context/Context.js';
 import NZMap from '../components/NZMap.js';
 import SearchForm from '../components/SearchForm.js';
 
+
 export default function Home() {
     const { currentRegion } = useContext(Context);
     const { Region, Active, Recovered, Deceased, Total } = currentRegion;

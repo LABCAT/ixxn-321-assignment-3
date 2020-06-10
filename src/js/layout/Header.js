@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from "react-router-dom";
 import mainLogo from "../../images/mainDashboardLogo.png";
+// import mobileLogo from "../../image/mobileLogo.png";
 
+
+
+import { Context } from '../context/Context.js';
 
 export default function Header() {
+    const { alertLevel } = useContext(Context);
     return (
         <header className='site-header'>
            
@@ -14,13 +19,7 @@ export default function Header() {
                 alt="covid19 logo"
              />
             </Link>
-        
-            <nav className="site-header-nav">
-                <Link to="/">Home</Link>
-                <Link to="/page-1">Page 1</Link>
-                <Link to="/page-2">Page 2</Link>
-                <Link to="/page-3">Page 3</Link>
-            </nav>
+            <span className='site-header-alert-level'>Alert Level {alertLevel}</span>
         </header>
     );
 }

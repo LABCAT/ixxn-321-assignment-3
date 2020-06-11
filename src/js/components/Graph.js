@@ -27,13 +27,30 @@ export default function Graph() {
                     <VictoryLabel 
                         textAnchor="middle"
                         verticalAnchor="middle"
-                        x={125} y={160}
-                        style={[{ fontSize: 50, fill: '#A0FF90', fontWeight: '600'},
-                        { fill: '#A0FF90', fontSize: 16 },
-                        { fontSize: 50, fill: '#FF6767', fontWeight: '600'},
-                        { fill: '#FF6767', fontSize: 16 }]}
-                        
-                        text={[`${data[0].y}`, 'Recovered', `${data[1].y}`, 'Infected']}
+                        x={125} y={90}
+                        style={{ fontSize: 50, fill: '#A0FF90', fontWeight: '600'}}
+                        text={`${data[0].y}`}
+                    />
+                    <VictoryLabel 
+                        textAnchor="middle"
+                        verticalAnchor="middle"
+                        x={125} y={115}
+                        style={{ fill: '#A0FF90', fontSize: 16 }}
+                        text={'Recovered'}
+                    />
+                    <VictoryLabel 
+                        textAnchor="middle"
+                        verticalAnchor="middle"
+                        x={125} y={155}
+                        style={{ fontSize: 50, fill: '#FF6767', fontWeight: '600'}}
+                        text={`${data[1].y}`}
+                    />
+                    <VictoryLabel 
+                        textAnchor="middle"
+                        verticalAnchor="middle"
+                        x={125} y={180}
+                        style={{fill: '#FF6767', fontSize: 16}}
+                        text={'Infected'}
                     />
                 </svg>
             </div>

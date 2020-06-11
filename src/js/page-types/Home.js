@@ -14,12 +14,12 @@ export default function Home() {
 
     return (
         <section className="home-page">
-            <label className="switch">
+            <label className="home-page-switch">
                 <input 
                     type="checkbox" 
                     onClick={handleClick} 
                 />
-                <span className="slider"></span>
+                <span className="home-page-slider round"></span>
             </label>
             <Transition
                 items={showMapSection}

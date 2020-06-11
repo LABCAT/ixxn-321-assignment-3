@@ -6,6 +6,7 @@
 
     &-logo {
         margin-right: auto;
+        float:right;
     }
 
     &-alert-level {
@@ -14,5 +15,11 @@
         font-size: 2rem;
         font-weight: bold;
         text-transform: uppercase;
+        margin-right: 670px;
     }
+}
+
+.logo-image{
+    width: 200px;
+    height: 100px;
 }

@@ -26,5 +26,9 @@ export const categories = [
     {
         "value": "Childcare",
         "title": "Childcare"
+    },
+    {
+        "value": "Travel",
+        "title": "Travel"
     }
 ];

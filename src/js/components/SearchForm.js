@@ -59,7 +59,7 @@ export default function SearchForm() {
 
     return (
         <form className="search-form" onSubmit={handleSubmit}>
-            <label htmlFor="keyword">I WANT TO LEARN ABOUT</label>
+            <label  htmlFor="keyword" className="search-form-labels">I WANT TO LEARN ABOUT</label>
             <input 
                 type="text" 
                 name="keyword" 
@@ -74,7 +74,7 @@ export default function SearchForm() {
                 value={keyword} 
                 placeholder="Your keyword/s"
             />
-            <label htmlFor="categories">IN</label>
+            <label htmlFor="categories" className="search-form-labels">IN</label>
             <select onChange={event => setCategory(event.target.value)} value={category}>
                 {
                     Constants.categories.map(
@@ -86,7 +86,7 @@ export default function SearchForm() {
                     )
                 }
             </select>
-            <button type="submit">FIND ANSWERS</button>
+            <button className="search-form-button" type="submit">FIND ANSWERS</button>
         </form>
     );
 }

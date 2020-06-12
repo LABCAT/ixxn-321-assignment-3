@@ -1,0 +1,28 @@
+.search-form{
+    justify-content: center;
+    border: 2px solid $blue-1 ;
+    padding: 10px;
+    margin: 20px 360px;
+    width:730px;
+
+    &-button{
+        padding: 10px;
+        margin-left: 20px;
+    }
+ 
+    input{
+        margin-left: 15px;
+        padding: 8px;
+    }
+
+}
+
+.search-form-labels{
+    padding:10px;
+}
+
+
+// .search-form-button{
+//     padding:10px;
+// }
+

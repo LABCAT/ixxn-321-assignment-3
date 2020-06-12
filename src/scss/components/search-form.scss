@@ -1,5 +1,6 @@
 .search-form{
-    justify-content: center;
+    display: flex;
+    align-items: center;
     border: 2px solid $blue-1 ;
     padding: 10px;
     margin: 20px 360px;
@@ -22,7 +23,11 @@
 }
 
 
-// .search-form-button{
-//     padding:10px;
-// }
+@media (max-width: 769px){
+    .search-from{
+   width:100px;
+   justify-content:start;
+   margin-right:75% ;
+    }
+}
 

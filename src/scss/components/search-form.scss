@@ -1,10 +1,9 @@
 .search-form{
-    display: flex;
+    display: inline-block;
     align-items: center;
     border: 2px solid $blue-1 ;
     padding: 10px;
-    margin: 20px 360px;
-    width:730px;
+    margin: 20px 30px; 
 
     &-button{
         padding: 10px;
@@ -19,15 +18,37 @@
 }
 
 .search-form-labels{
-    padding:10px;
+    padding:15px;
 }
 
 
-@media (max-width: 769px){
-    .search-from{
-   width:100px;
-   justify-content:start;
-   margin-right:75% ;
+@media (max-width: 320px){
+    .search-from, button, input{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px 10px;
+        grid-template-areas: ". . . ." ". . . ." ". . . ." ". . . ." ". . . ." ". . . .";
+    }
+}
+
+// @media (max-width: 769px){
+//     button{
+//     margin-left: 40%;
+//     align-self: stretch;
+//     padding:50px;
+//     grid-row: third-line / 4 ;
+//     }
+// }
+
+
+@media (max-width: 320px){
+    .search-form-labels, button, input{
+        padding:15px;
+        margin-left: 20%;
+        align-self: center;
+        flex-direction: column;
+        
+
     }
 }
 

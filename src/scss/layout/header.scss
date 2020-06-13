@@ -10,6 +10,7 @@
     }
 
     &-alert-level {
+        display: flex;
         color: $yellow;
         font-family: 'Lato', sans-serif;
         font-size: 2rem;
@@ -22,4 +23,15 @@
 .logo-image{
     width: 200px;
     height: 100px;
+}
+
+
+@media (max-width: 320px){
+    .alert-level{
+        margin-right: 50px;
+        align-self: center;
+        flex-direction: row;
+        
+
+    }
 }

@@ -17,7 +17,9 @@ export default function Header() {
                 alt="covid19 logo"
              />
             </Link>
+            <Link to= "/">
             <span className='site-header-alert-level'>Alert Level {alertLevel}</span>
+            </Link>
         </header>
     );
 }

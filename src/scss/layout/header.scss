@@ -10,12 +10,13 @@
     }
 
     &-alert-level {
+        display: inline-block;
         color: $yellow;
         font-family: 'Lato', sans-serif;
         font-size: 2rem;
         font-weight: bold;
         text-transform: uppercase;
-        margin-right: 670px;
+        
     }
 }
 

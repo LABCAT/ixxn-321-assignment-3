@@ -74,7 +74,7 @@ export default function SearchForm() {
                 value={keyword} 
                 placeholder="Your keyword/s"
             />
-            <label htmlFor="categories" className="search-form-labels">IN</label>
+            <label htmlFor="categories" className="search-form-categories">IN</label>
             <select onChange={event => setCategory(event.target.value)} value={category}>
                 {
                     Constants.categories.map(

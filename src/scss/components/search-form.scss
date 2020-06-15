@@ -1,33 +1,51 @@
 .search-form{
-    display: inline-block;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     border: 2px solid $blue-1 ;
     padding: 10px;
-    margin: 20px 30px; 
+    margin: 20px; 
+    width: 95%;
 
     &-button{
-        padding: 10px;
-        margin-left: 20px;
+        padding: 20px;
+        margin: 10px;
+        grid-column: 5 / span 2;
     }
  
     input{
         margin-left: 15px;
         padding: 8px;
+        border-color: white;
+        color: white;
+        background-color: $black-1;
+        height: 60px;
+        width: 290px;
     }
-
+    select{
+        padding: 20px;
+        border-color: white;
+        background-color: $black-1;
+        color: white;
+        width: 290px;
+        margin-right: 10px;
+ }
 }
 
 .search-form-labels{
-    padding:15px;
+    padding:10px;
+}
+
+.search-form-categories{
+    padding: 15px;
+    margin-left: 65px;
 }
 
 
 @media (max-width: 320px){
-    .search-from, button, input{
+    .search-form, button, input, select{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 10px 10px;
-        grid-template-areas: ". . . ." ". . . ." ". . . ." ". . . ." ". . . ." ". . . .";
     }
 }
 
@@ -41,14 +59,14 @@
 // }
 
 
-@media (max-width: 320px){
-    .search-form-labels, button, input{
-        padding:15px;
-        margin-left: 20%;
-        align-self: center;
-        flex-direction: column;
+// @media (max-width: 320px){
+//     .search-form-labels{
+//         padding:15px;
+//         margin-left: 50%;
+//         align-self: center;
+//         flex-direction: column;
         
 
-    }
-}
+//     }
+// }
 

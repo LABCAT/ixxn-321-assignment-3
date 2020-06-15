@@ -1,9 +1,13 @@
-import React, { useContext, useState, useCallback } from 'react';
-import { Transition } from 'react-spring/renderprops'
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+import { Transition } from 'react-spring/renderprops';
+
 
 import NZMap from '../components/NZMap.js';
 import Graph from '../components/Graph';
 import SearchForm from '../components/SearchForm.js';
+
+import * as Constants from '../context/Constants.js';
 
 export default function Home() {
     const [showMapSection, setShowMapSection] = useState(false);
@@ -35,6 +39,30 @@ export default function Home() {
                         : props => 
                         <div className="home-page-search-section" style={props}>
                             <SearchForm />
+                            <div className="home-page-search-section-quick-links">
+                                {
+                                    Constants.categories.filter(
+                                        function (category) {
+                                            if (category.value === "All") {
+                                                return false; 
+                                            }
+                                            return true;
+                                        }
+                                    ).map(
+                                        category => (
+                                            <Link to={`/search/category=${category.title}`}>
+                                                <div className="image-holder">
+                                                    <img
+                                                        src={require(`../../images/${category.title}.png`)}
+                                                        alt={category.title}
+                                                    />
+                                                </div>
+                                                <h2>{category.title}</h2>
+                                            </Link>
+                                        )
+                                    )
+                                }
+                            </div>
                         </div>
                 }
             </Transition>

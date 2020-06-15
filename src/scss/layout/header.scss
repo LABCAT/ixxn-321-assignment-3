@@ -10,28 +10,17 @@
     }
 
     &-alert-level {
-        display: flex;
+        display: inline-block;
         color: $yellow;
         font-family: 'Lato', sans-serif;
         font-size: 2rem;
         font-weight: bold;
         text-transform: uppercase;
-        margin-right: 670px;
+        
     }
 }
 
 .logo-image{
     width: 200px;
     height: 100px;
-}
-
-
-@media (max-width: 769px){
-    .alert-level{
-        margin-right: 50px;
-        align-self: center;
-        flex-direction: row;
-        
-
-    }
 }

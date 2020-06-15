@@ -11,7 +11,6 @@ function App() {
     <GlobalContextProvider>
       <Header />
       <Main />
-      <Footer />
     </GlobalContextProvider>
   );
 }

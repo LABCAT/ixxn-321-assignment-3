@@ -10,7 +10,7 @@
     &-button{
         padding: 20px;
         margin: 10px;
-        grid-column: 5 / span 2;
+        grid-column: span 2;
     }
  
     input{
@@ -42,31 +42,48 @@
 }
 
 
-@media (max-width: 320px){
-    .search-form, button, input, select{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+@media (max-width: 769px){
+    .search-form{
+        grid-template-columns: 290px;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        align-content: center;
+        justify-content: space-evenly;
     }
 }
 
-// @media (max-width: 769px){
-//     button{
-//     margin-left: 40%;
-//     align-self: stretch;
-//     padding:50px;
-//     grid-row: third-line / 4 ;
-//     }
-// }
+@media (max-width: 769px){
+    input {
+        grid-row: 2;
+        align-items: center;
+    }
+}
+
+@media (max-width: 769px){
+    .search-form-categories{
+        grid-row: 3;
+        align-self: center;
+        margin-left: 125px;
+    }
+}
+
+@media (max-width: 769px){
+    select{
+        grid-row: 4;
+    }
+}
+
+@media (max-width: 769px){
+    button{
+        grid-row: 5;
+    }
+}
+
+@media (max-width: 769px){
+.search-form-labels{
+    margin-left: 60px;
+}
+}
 
 
-// @media (max-width: 320px){
-//     .search-form-labels{
-//         padding:15px;
-//         margin-left: 50%;
-//         align-self: center;
-//         flex-direction: column;
-        
 
-//     }
-// }
 

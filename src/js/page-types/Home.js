@@ -30,11 +30,12 @@ export default function Home() {
                     showMapSection
                         ? props => 
                             <div className="home-page-map-section" style={props}>
-                            <div className="home-page-map-section-column">
-                                <NZMap />
+                            <div className="home-page-map-section-column" style={{width:"80%", marginLeft:'auto', marginRight:'auto'}}>
+                                    <NZMap />
+                                    <Graph />
                             </div>
                             <div className="home-page-map-section-column">
-                                <Graph />
+                                
                                 <dl>
                                     <dt>Current region selected</dt>
                                     <dd>{Region}</dd>

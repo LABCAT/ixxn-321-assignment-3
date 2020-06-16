@@ -1,3 +1,10 @@
 .nz-map {
-    width: 600px;
+    width: 45%;
+}
+
+@media (max-width: 1000px){
+    .nz-map {
+        margin-top: -6vw;
+        width: 75%;
+    }
 }

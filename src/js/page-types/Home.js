@@ -14,27 +14,6 @@ export default function Home() {
     const [showMapSection, setShowMapSection] = useState(false);
     const handleClick = () => setShowMapSection(!showMapSection);
 
-    //code to change the graph once the page width is less than 1000px
-    const mq = window.matchMedia('(max-width: 1000px)');
-    function graphChange(mq) {
-        if (mq.matches) {
-            return (
-                <div style={{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center"}}>
-
-                        <GraphMobile/>
-
-                        <NZMap/>
-
-                </div>)
-        } else {
-            return (
-                <div>
-                    <NZMap />
-                    <Graph />
-                </div>)
-        }
-    }
-
 
     return (
         <section className="home-page">
@@ -54,8 +33,15 @@ export default function Home() {
                     showMapSection
                         ? props =>
                             <div className="home-page-map-section" style={props}>
-                                <div className="home-page-map-section-column" style={{ width: "70%", marginLeft: 'auto', marginRight: 'auto' }}>
-                                    {graphChange(mq)}
+                                <div className="home-page-map-section-column">
+                                    <div class="mobile-graph">
+                                        <GraphMobile />
+                                        <NZMap />
+                                    </div>
+                                    <div class="big-graph">
+                                        <NZMap />
+                                        <Graph />
+                                    </div>
                                 </div>
                             </div>
                         : props =>

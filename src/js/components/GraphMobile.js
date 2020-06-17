@@ -21,7 +21,6 @@ export default function Graph() {
                 horizontal={true}
                 animate={{ duration: 500 }}
                 width={1000}
-                
                 >
                 <VictoryBar
                     data={[data[0]]}

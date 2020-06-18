@@ -54,7 +54,7 @@ export default function SearchForm() {
                 }
             }
         },
-        [keyword, category, setSearchQuery]
+        [keyword, category, hasBeenReset, setSearchQuery]
     );
 
     return (

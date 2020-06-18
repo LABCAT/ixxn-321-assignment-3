@@ -3,7 +3,7 @@ import { VictoryLabel, VictoryBar, VictoryStack } from 'victory';
 import { Context } from '../context/Context.js';
 
 export default function Graph() {
-    const { currentRegion } = useContext(Context);
+    const { setRegion, currentRegion } = useContext(Context);
     const { Region, Recovered, Deceased } = currentRegion;
 
     //Setting the data for the graph
@@ -12,6 +12,29 @@ export default function Graph() {
         { x: "", y: Deceased },
         { name: Region }
     ]
+
+    const handleOnCLick = (region) => {
+        setRegion(region);
+    };
+
+    //Shows the reset button when a region is selected
+    function resetButton(regionName){
+        if(regionName !== "Nationwide"){
+            return(
+                <a href="/" onClick={(e) => { e.preventDefault(); handleOnCLick("Nationwide") }}>
+                    <VictoryLabel
+                        textAnchor="middle"
+                        verticalAnchor="middle"
+                        x={500} y={220}
+                        style={{ fill: '#005D70', fontSize: 26, fontWeight: '100', fontFamily: 'Lato' }}
+                        text={'Reset to Nationwide'}
+                    />
+                </a>
+            )
+        }else{
+            return
+        }
+    }
 
         return (
             <svg width="100%" height="100%" viewBox="0 90 1000 250">
@@ -35,7 +58,7 @@ export default function Graph() {
                 <VictoryLabel
                     textAnchor="middle"
                     verticalAnchor="middle"                    
-                    x={500} y={105}
+                    x={500} y={100}
                     style={{ fill: '#FFFFFF', fontSize: 26, fontWeight: '100', fontFamily: 'Lato' }}
                     text={`${data[2].name}`}
                 />
@@ -67,6 +90,7 @@ export default function Graph() {
                     style={{ fill: '#FF6767', fontSize: 26, fontWeight: '100', fontFamily: 'Lato' }}
                     text={'Deceased'}
                 />
+                {resetButton(data[2].name)}
             </svg>
         )
     }

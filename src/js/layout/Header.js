@@ -11,13 +11,15 @@ export default function Header() {
         <header className='site-header'>
            
             <Link to="/" className='site-header-logo'>
-             <img
+            <img
                 src={mainLogo}
                 className="logo-image"
                 alt="covid19 logo"
              />
             </Link>
+            <Link to= "/">
             <span className='site-header-alert-level'>Alert Level {alertLevel}</span>
+            </Link>
         </header>
     );
 }

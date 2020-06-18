@@ -16,5 +16,6 @@ export default function Main() {
                 <Route exact path="/style-guide" component={StyleGuide} />
             </Switch>
         </main>
+        
     );
 }

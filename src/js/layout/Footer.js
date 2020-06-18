@@ -63,11 +63,17 @@ export default function Footer() {
                 alt="covid19 logo"
              />
     </Link>
-  </div>           
+  </div> 
+
+
+            
+<hr/>
+
+
 
 </div>
 
-<hr/>
+
 
 
 

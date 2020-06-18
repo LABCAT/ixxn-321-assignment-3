@@ -5,38 +5,65 @@ import mainLogo from "../../images/mainDashboardLogo.png";
 export default function Footer() {
     return (
         
-
-
 <footer className='site-footer'>
-       
-<div class="column3">
+
+      
+<div class="footer-container">
+
+<div className="footer-col"> 
+   
+<h4>Learn About</h4>
+
+
+    <div className="footer-content"><a href="/search/category=Health"><li>Health</li></a></div> 
+
+    <div className="footer-content"><a href="/search/category=Business"><li>Business</li></a></div>
+
+    <div className="footer-content"><a href="/search/category=PPE"><li>PPE</li></a></div>
     
-    <ul>
-    <li>
-<h4>Contact Us</h4>
-<div className="p1">
+    <div className="footer-content"><a href="/search/category=Levels"><li>Levels</li></a></div>
 
-    <p> Address: 1A Vivian Street, Te Aro, Wellington, NZ.  </p> 
-    <p>Postal code: 6011.</p>
+    <div className="footer-content"><a href="/search/category=Finances"><li>Finances</li></a></div>
 
-  
-    <p>Phone number: (+64) 774140931.</p>
-    <p>Email address: Checkincovid19@gmail.com</p>
-    <p>Working hour: 9am – 9pm, Monday to Sunday.</p>
-    <p>Social media: Checkincovid19</p>
+	<div className="footer-content"><a href="/search/category=Childcare"><li>Childcare</li></a></div>
+
+	<div className="footer-content"><a href="/search/category=Travel"><li>Travel</li></a></div>
+
+   
 </div>
-    </li> 
+
+<div className="footer-col"> 
+   
+<h4>Learn About</h4>
+
+
+    <div className="footer-content"><a href="/search/category=Health"><li>Health</li></a></div> 
+
+    <div className="footer-content"><a href="/search/category=Business"><li>Business</li></a></div>
+
+    <div className="footer-content"><a href="/search/category=PPE"><li>PPE</li></a></div>
+    
+    <div className="footer-content"><a href="/search/category=Levels"><li>Levels</li></a></div>
+
+    <div className="footer-content"><a href="/search/category=Finances"><li>Finances</li></a></div>
+
+	<div className="footer-content"><a href="/search/category=Childcare"><li>Childcare</li></a></div>
+
+	<div className="footer-content"><a href="/search/category=Travel"><li>Travel</li></a></div>
+
+   
+</div>  
+ 
+ <div class="footer-col">
+
     <Link to="/" className='site-header-logo'>
              <img
                 src={mainLogo}
                 className="logo-image"
                 alt="covid19 logo"
              />
-            </Link>
-  <li>
-  </li>   
-
- </ul> 
+    </Link>
+  </div>           
 
 </div>
 
@@ -46,13 +73,11 @@ export default function Footer() {
 
 <div className="footer-nav">
 
-  <ul>
-    <a href="index.js"><li>About us</li></a>
+    <a href="#"><li>About us</li></a>
     <a href="#"><li>Privacy</li></a>
     <a href="#"><li>Term of use</li></a>
     <a href="#"><li>Contact</li></a>
   
-  </ul>
 </div>
 
 

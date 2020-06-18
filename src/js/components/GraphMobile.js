@@ -4,7 +4,7 @@ import { Context } from '../context/Context.js';
 
 export default function Graph() {
     const { currentRegion } = useContext(Context);
-    const { Region, Active, Recovered, Deceased, Total } = currentRegion;
+    const { Region, Recovered, Deceased } = currentRegion;
 
     //Setting the data for the graph
     const data = [

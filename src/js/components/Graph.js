@@ -4,7 +4,7 @@ import { Context } from '../context/Context.js';
 
 export default function Graph() {
     const { currentRegion } = useContext(Context);
-    const { Region, Active, Recovered, Deceased, Total } = currentRegion;
+    const { Region, Recovered, Deceased } = currentRegion;
 
     //Setting the data for the graph
     const data = [
@@ -15,7 +15,7 @@ export default function Graph() {
 
     //Sets the the graph's padAngle to zero if deceased value is zero
     function graphPad(number) {
-        if (number == 0) {
+        if (number === 0) {
             return 0
         } else {
             return 1

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { VictoryPie, VictoryLabel } from 'victory';
+import { VictoryLabel, VictoryBar, VictoryStack } from 'victory';
 import { Context } from '../context/Context.js';
 
 export default function Graph() {
@@ -13,65 +13,57 @@ export default function Graph() {
         { name: Region }
     ]
 
-    //Sets the the graph's padAngle to zero if deceased value is zero
-    function graphPad(number) {
-        if (number == 0) {
-            return 0
-        } else {
-            return 1
-        }
-    }
-
-    //Code underneath changes the graph based on the screens width
-   
         return (
-            <svg width="50%" height="50%" viewBox="0 0 400 400" style={{ marginBottom: "2vw" }}>
-                <VictoryPie
-                    standalone={false}
-                    width={400} height={400}
-                    padAngle={graphPad(Deceased)}
-                    cornerRadius={2}
-                    innerRadius={130}
-                    colorScale={['#A0FF90', '#FF6767']}
-                    labels={() => null}
-                    animate={{ duration: 500 }}
-                    data={[
-                        data[0],
-                        data[1]
-                    ]}
+            <svg width="100%" height="100%" viewBox="0 90 1000 250">
+                <VictoryStack
+                standalone={false}
+                colorScale={['#A0FF90', '#FF6767']}
+                horizontal={true}
+                animate={{ duration: 500 }}
+                width={1000}
+                >
+                <VictoryBar
+                    data={[data[0]]}
+                    barWidth={60}
                 />
+                <VictoryBar
+                    data={[data[1]]}
+                    barWidth={60}
+                />
+                </VictoryStack>
+
                 <VictoryLabel
                     textAnchor="middle"
-                    verticalAnchor="middle"
-                    x={200} y={30}
+                    verticalAnchor="middle"                    
+                    x={500} y={105}
                     style={{ fill: '#FFFFFF', fontSize: 26, fontWeight: '100', fontFamily: 'Lato' }}
                     text={`${data[2].name}`}
                 />
                 <VictoryLabel
                     textAnchor="middle"
                     verticalAnchor="middle"
-                    x={200} y={130}
+                    x={150} y={220}
                     style={{ fontSize: 60, fill: '#A0FF90', fontWeight: '600', fontFamily: 'Lato' }}
                     text={`${data[0].y}`}
                 />
                 <VictoryLabel
                     textAnchor="middle"
                     verticalAnchor="middle"
-                    x={200} y={170}
+                    x={150} y={255}
                     style={{ fill: '#A0FF90', fontSize: 26, fontWeight: '100', fontFamily: 'Lato' }}
                     text={'Recovered'}
                 />
                 <VictoryLabel
                     textAnchor="middle"
                     verticalAnchor="middle"
-                    x={200} y={230}
+                    x={850} y={220}
                     style={{ fontSize: 60, fill: '#FF6767', fontWeight: '600', fontFamily: 'Lato' }}
                     text={`${data[1].y}`}
                 />
                 <VictoryLabel
                     textAnchor="middle"
                     verticalAnchor="middle"
-                    x={200} y={270}
+                    x={850} y={255}
                     style={{ fill: '#FF6767', fontSize: 26, fontWeight: '100', fontFamily: 'Lato' }}
                     text={'Deceased'}
                 />

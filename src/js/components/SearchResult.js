@@ -7,7 +7,9 @@ export default function SearchResult(props) {
     return (
         <article className="search-result">
 
- <img className="search-result-images" src={require(`../../images/${category}.png`)} /> 
+ <img className="search-result-images" src={require(`../../images/${category}.png`)} 
+ alt={category.title}
+ /> 
        
         <div className="search-result-content">
             <h2>

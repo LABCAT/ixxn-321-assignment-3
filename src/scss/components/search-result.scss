@@ -1,0 +1,20 @@
+.search-result{
+display: grid;
+grid-template-columns: 150px 1fr 1fr;
+grid-template-rows: 1fr;
+grid-gap: 70px;
+
+&-images{
+width:150px;
+height: 150px;
+grid-row: span 1;
+margin-left: 20px;
+}
+
+&-content{
+margin-top: 0px;
+grid-column: span 2;
+
+}
+
+}

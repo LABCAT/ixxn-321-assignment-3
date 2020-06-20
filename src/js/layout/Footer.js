@@ -66,8 +66,8 @@ export default function Footer() {
   </div> 
 
 
-            
-<hr/>
+
+
 
 
 
@@ -78,7 +78,7 @@ export default function Footer() {
 
 
 <div className="footer-nav">
-
+<hr/>
     <a href="#"><li>About us</li></a>
     <a href="#"><li>Privacy</li></a>
     <a href="#"><li>Term of use</li></a>

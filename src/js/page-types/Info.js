@@ -18,27 +18,31 @@ export default function info() {
 <Link to="/">Home</Link>
 </div>
 
-        <div className="info-container" id="about-us">
+
+<div className="info-container" id="about-us">
    <h3>About Us</h3>     
-   <p> If you’re dealing with the fallout from COVID-19 and need some help, check out the content on this site. </p>
+    <p> If you’re dealing with the fallout from COVID-19 and need some help, check out the content on this site. </p>
 
-<p>This website is a central place for information about a range of government 
-services designed to support New Zealand to recover from the impacts of COVID-19. 
-It also has information about the measures required to combat the COVID-19 virus 
-including an outline of New Zealand's Alert Level system.</p>
+    <p>This website is a central place for information about a range of government 
+	services designed to support New Zealand to recover from the impacts of COVID-19. 
+	It also has information about the measures required to combat the COVID-19 virus 
+	including an outline of New Zealand's Alert Level system.</p>
 
-<p> We will continue to update the site with programmes and information about support being provided by a 
-range of central and local government agencies. </p>
+	<p> We will continue to update the site with programmes and information about support being provided by a 
+	range of central and local government agencies. </p>
 
-<p>This site has been developed by the Group 3 Web Design - Victoria University of Wellington 2020 </p>
+	<p>This site has been developed by the Group 3 Web Design - Victoria University of Wellington 2020 </p>
+
 
 <hr/>
 </div>
 
-        <div className="info-container" id="privacy">
+
+<div className="info-container" id="privacy">
 
    <h3>Privacy</h3>        
-   <p> The purpose of this privacy policy is to let users of covid.mysite.net.nz (the ‘site’) 
+    <p> The purpose of this privacy policy is to let users of covid.mysite.net.nz (the ‘site’) 
+
    	know when we collect personal information and what we do with it.</p>
 	<p>We do not use, share or transfer personal information in connection with the site except as set out in this policy, 
 	or as otherwise set out somewhere on the site including in terms linking to the site.</p>
@@ -58,10 +62,18 @@ range of central and local government agencies. </p>
 	You may turn off cookies at any time. Most browsers have a feature that allows the user to refuse cookies, 
 	or issues a warning when cookies are being sent. Turning off cookies will not affect your ability to use this site.</p>
 
+
 	<h4>Cookies</h4>
 	<p>This site generates persistent session cookies for the purpose of monitoring site usage. 
 	These have an expiry date and are removed on that date. The cookies do not collect personal information. 
 	You can disable them or clear them out of your web browser without affecting your ability to use the site.</p>
+
+   <h4>Cookies</h4>
+	<p>This site generates persistent session cookies for the purpose of monitoring site usage. 
+	These have an expiry date and are removed on that date. The cookies do not collect personal information. 
+	You can disable them or clear them out of your web browser without affecting your ability to use the site.</p>
+
+
 <hr/>
 </div>
 
@@ -86,7 +98,11 @@ range of central and local government agencies. </p>
 	you should see a professional adviser and not rely on the information, 
 	content or materials included on this site or on any website we link to.</p>
 
+
 	<h4>Continuity of service</h4>
+
+   <h4>Continuity of service</h4>
+
 
 	<p>The NZ Government makes no warranty or representation, express or implied, as to continuity of service. 
 	It reserves the right to suspend, terminate or otherwise alter access to some or 
@@ -98,7 +114,11 @@ range of central and local government agencies. </p>
  <div className="info-container" id="contact">
 
  <h3>Contact</h3>  
+
  <h4>Who to contact if you have questions or want to give us feedback on the website.</h4> 
+
+   <h4>Who to contact if you have questions or want to give us feedback on the website.</h4> 
+
    	<p> Email: checkin@covid19.nz </p>
 
 	<p>Fax: +64 123 456 78910</p>
@@ -114,9 +134,14 @@ range of central and local government agencies. </p>
 </div>
 <br/>
 <br/>
+
 <div className="info-nav-bottom">
 <a href="#top">Back to top</a>
 </div>
+
+
+
+
 </div>
 
 

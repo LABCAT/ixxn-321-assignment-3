@@ -6,6 +6,9 @@ import Page from '../page-types/Page';
 import SearchResultsPage from '../page-types/SearchResultsPage';
 import StyleGuide from '../page-types/StyleGuide';
 
+import Info from '../page-types/Info';
+
+
 export default function Main() {
     return (
         <main className='main'>
@@ -14,6 +17,9 @@ export default function Main() {
                 <Route path="/search" component={SearchResultsPage} />
                 <Route  path="/page/:id" component={Page} />
                 <Route exact path="/style-guide" component={StyleGuide} />
+
+                <Route path="/info" component={Info} />
+
             </Switch>
         </main>
         

@@ -10,51 +10,30 @@ export default function Footer() {
       
 <div class="footer-container">
 
-<div className="footer-col"> 
+    <div className="footer-col"> 
    
-<h4>Learn About</h4>
+        <h4>Learn About</h4>
 
 
-    <div className="footer-content"><a href="/search/category=Health"><li>Health</li></a></div> 
+        <div className="footer-content"><Link to="/search/category=Health"><li>Health</li></Link></div> 
 
-    <div className="footer-content"><a href="/search/category=Business"><li>Business</li></a></div>
+        <div className="footer-content"><Link to="/search/category=Business"><li>Business</li></Link></div>
 
-    <div className="footer-content"><a href="/search/category=PPE"><li>PPE</li></a></div>
+        <div className="footer-content"><Link to="/search/category=PPE"><li>PPE</li></Link></div>
     
-    <div className="footer-content"><a href="/search/category=Levels"><li>Levels</li></a></div>
+        <div className="footer-content"><Link to="/search/category=Levels"><li>Levels</li></Link></div>
 
-    <div className="footer-content"><a href="/search/category=Finances"><li>Finances</li></a></div>
+        <div className="footer-content"><Link to="/search/category=Finances"><li>Finances</li></Link></div>
 
-	<div className="footer-content"><a href="/search/category=Childcare"><li>Childcare</li></a></div>
+	    <div className="footer-content"><Link to="/search/category=Childcare"><li>Childcare</li></Link></div>
 
-	<div className="footer-content"><a href="/search/category=Travel"><li>Travel</li></a></div>
-
-   
-</div>
-
-<div className="footer-col"> 
-   
-<h4>Learn About</h4>
-
-
-    <div className="footer-content"><a href="/search/category=Health"><li>Health</li></a></div> 
-
-    <div className="footer-content"><a href="/search/category=Business"><li>Business</li></a></div>
-
-    <div className="footer-content"><a href="/search/category=PPE"><li>PPE</li></a></div>
-    
-    <div className="footer-content"><a href="/search/category=Levels"><li>Levels</li></a></div>
-
-    <div className="footer-content"><a href="/search/category=Finances"><li>Finances</li></a></div>
-
-	<div className="footer-content"><a href="/search/category=Childcare"><li>Childcare</li></a></div>
-
-	<div className="footer-content"><a href="/search/category=Travel"><li>Travel</li></a></div>
+	    <div className="footer-content"><Link to="/search/category=Travel"><li>Travel</li></Link></div>
 
    
-</div>  
+    </div>
+
  
- <div class="footer-col">
+    <div class="footer-col">
 
     <Link to="/" className='site-header-logo'>
              <img
@@ -63,12 +42,7 @@ export default function Footer() {
                 alt="covid19 logo"
              />
     </Link>
-  </div> 
-
-
-
-
-
+    </div> 
 
 
 </div>
@@ -78,11 +52,11 @@ export default function Footer() {
 
 
 <div className="footer-nav">
-<hr/>
-    <a href="#"><li>About us</li></a>
-    <a href="#"><li>Privacy</li></a>
-    <a href="#"><li>Term of use</li></a>
-    <a href="#"><li>Contact</li></a>
+    <hr/>
+        <a href="/info#about-us"><li>About us</li></a>
+        <a href="/info#privacy"><li>Privacy</li></a>
+        <a href="/info#terms-of-use"><li>Terms of use</li></a>
+        <a href="/info#contact"><li>Contact</li></a>
   
 </div>
 
@@ -90,3 +64,8 @@ export default function Footer() {
 </footer>
     );
 }
+
+
+
+
+

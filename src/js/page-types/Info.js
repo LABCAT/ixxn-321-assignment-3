@@ -63,11 +63,6 @@ export default function info() {
 	or issues a warning when cookies are being sent. Turning off cookies will not affect your ability to use this site.</p>
 
 
-	<h4>Cookies</h4>
-	<p>This site generates persistent session cookies for the purpose of monitoring site usage. 
-	These have an expiry date and are removed on that date. The cookies do not collect personal information. 
-	You can disable them or clear them out of your web browser without affecting your ability to use the site.</p>
-
    <h4>Cookies</h4>
 	<p>This site generates persistent session cookies for the purpose of monitoring site usage. 
 	These have an expiry date and are removed on that date. The cookies do not collect personal information. 
@@ -99,7 +94,6 @@ export default function info() {
 	content or materials included on this site or on any website we link to.</p>
 
 
-	<h4>Continuity of service</h4>
 
    <h4>Continuity of service</h4>
 

@@ -6,6 +6,12 @@ export default function SearchResult(props) {
     const { id, title, summary, category } = props;
     return (
         <article className="search-result">
+
+ <img className="search-result-images" src={require(`../../images/${category}.png`)} 
+ alt={category.title}
+ /> 
+       
+        <div className="search-result-content">
             <h2>
                 <Link to={`/page/${id}/`}>
                     {title}
@@ -17,6 +23,7 @@ export default function SearchResult(props) {
             <div dangerouslySetInnerHTML={{ __html: summary }}>
 
             </div>
+        </div>
         </article>
     );
 }

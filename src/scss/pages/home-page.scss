@@ -2,10 +2,10 @@
 
   &-switch{
     position: relative;
-     display: inline-block;
+     display: block;
     width: 60px;
     height: 34px;
-    margin-left: 700px ;
+    margin: 0 auto 2vw auto;
 
     input{
       opacity: 0;
@@ -108,20 +108,22 @@
     }
   }
 
-  .home-page-map-section-column{
+  &-map-section-column{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .mobile-graph{
-    display: none;
-  }
-  .big-graph{
+  
+    .mobile-graph{
+      display: none;
+    }
     
   }
 }
 
 @media (max-width: 1000px){
+  .home-page-map-section-column{
+    width: 100%;
+  }
   .mobile-graph{
     display: flex !important;
     flex-direction: column;

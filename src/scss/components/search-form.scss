@@ -1,19 +1,22 @@
 .search-form{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    display:flex;
     align-items: center;
+    justify-content: center;
     border: 2px solid $blue-1 ;
     padding: 10px;
-    margin: 20px; 
+    margin: 20px auto 20px auto; 
     width: 95%;
 
     &-button{
+        flex: 1;
         padding: 20px;
         margin: 10px;
         grid-column: span 2;
+        min-width: 105px;
     }
  
     input{
+        flex: 3;
         margin-left: 15px;
         padding: 8px;
         border-color: white;
@@ -23,66 +26,80 @@
         width: 290px;
     }
     select{
+        flex: 3;
         padding: 20px;
         border-color: white;
         background-color: $black-1;
         color: white;
         width: 290px;
         margin-right: 10px;
- }
+    }
+    &-labels{
+        flex: 2;
+        padding:10px;
+    }
+
+    &-categories{
+        flex: 0.5;
+        padding: 15px;
+        margin-left: 3vw;
+    }
 }
 
-.search-form-labels{
-    padding:10px;
-}
 
-.search-form-categories{
-    padding: 15px;
-    margin-left: 65px;
-}
 
+@media (max-width: 1020px){
+    .search-form{
+        input{
+            margin-left: 15px;
+            padding: 8px;
+            width: 28vw;
+        }
+        select{
+            padding: 20px;
+            width: 28vw;
+            margin-right: 10px;
+        }
+        &-labels{
+            padding:10px;
+        }
+        &-categories{
+            padding: 15px;
+            margin-left: 65px;
+        }
+    }
+}
 
 @media (max-width: 769px){
     .search-form{
-        grid-template-columns: 290px;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        flex-direction: column;
         align-content: center;
         justify-content: space-evenly;
+    
+        input {
+            width: 60vw;
+            flex: 2;
+            margin: auto;
+        }
+        .search-form-categories{
+            flex: 3;
+            align-self: center;
+            margin: auto;
+        }
+        select{
+            flex: 4;
+            width: 60vw;
+            margin: auto;
+        }
+        button{
+            flex: 5;
+        }
+        &-labels{
+            margin: auto;
+        }
     }
 }
 
-@media (max-width: 769px){
-    input {
-        grid-row: 2;
-        align-items: center;
-    }
-}
-
-@media (max-width: 769px){
-    .search-form-categories{
-        grid-row: 3;
-        align-self: center;
-        margin-left: 125px;
-    }
-}
-
-@media (max-width: 769px){
-    select{
-        grid-row: 4;
-    }
-}
-
-@media (max-width: 769px){
-    button{
-        grid-row: 5;
-    }
-}
-
-@media (max-width: 769px){
-.search-form-labels{
-    margin-left: 60px;
-}
-}
 
 
 

@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
-import { Transition } from 'react-spring/renderprops';
 
-
-
-import * as Constants from '../context/Constants.js';
 
 export default function info() {
 

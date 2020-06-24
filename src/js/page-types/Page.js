@@ -9,9 +9,9 @@ export default function Page() {
     const { Title, Content, Category, Summary } = pageContent;
     return (
         <article className="article-page">
-            <img className="category-image-top" src={(require(`../../images/${Category}.png`))}/>
+            <img className="category-image-top" src={(require(`../../images/${Category}.png`))} alt={Category}/>
             <h1 className="heading">{Title}</h1>
-            <img className="category-image-bottom" src={(require(`../../images/${Category}.png`))}/>   
+            <img className="category-image-bottom" src={(require(`../../images/${Category}.png`))} alt={Category}/>
             <div dangerouslySetInnerHTML={{ __html: Content }}>
             </div>
 

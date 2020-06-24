@@ -4,28 +4,28 @@ export const categories = [
         "title": "All Categories"
     },
     {
-        "value": "Health",
-        "title": "Health"
+        "value": "Levels",
+        "title": "Levels"
+    },
+    {
+        "value": "Personal Protective Equipment",
+        "title": "Personal Protective Equipment"
+    },
+    {
+        "value": "Childcare",
+        "title": "Childcare"
     },
     {
         "value": "Business",
         "title": "Business"
     },
     {
-        "value": "PPE",
-        "title": "PPE"
-    },
-    {
-        "value": "Levels",
-        "title": "Levels"
-    },
-    {
         "value": "Finances",
         "title": "Finances"
     },
     {
-        "value": "Childcare",
-        "title": "Childcare"
+        "value": "Health",
+        "title": "Health"
     },
     {
         "value": "Travel",

@@ -1,8 +1,10 @@
 import React, {Fragment, useContext } from 'react'
+import { Transition } from 'react-spring/renderprops';
 
 import searchData from "../../data/search-data.json";
 import SearchForm from '../components/SearchForm.js';
 import SearchResult from '../components/SearchResult.js';
+
 
 import { Context } from '../context/Context.js';
 
@@ -43,6 +45,11 @@ export default function SearchResultsPage() {
         }
     );
     
+    const hasResults = filteredSearchData.length ? true : false;
+
+    console.log(hasResults);
+    
+
     return (
         <section className="search-results-page">
             <SearchForm/>
@@ -50,23 +57,36 @@ export default function SearchResultsPage() {
                 searchHeading &&
                 <h1>{searchHeading}</h1>
             }
-            <div className={['search-results-page-' + (filteredSearchData.length ? 'results-grid' : 'no-results')]}>
-                {
-                    filteredSearchData.length ?
-                        filteredSearchData.map(
-                            page => (
-                                <SearchResult
-                                    key={page.ID}
-                                    id={page.ID}
-                                    title={page.Title}
-                                    summary={page.Summary}
-                                    category={page.Category}
-                                />
-                            )
-                        ) :
-                    <p>Sorry, we couldn't find any information matching your query. Please try again.</p>
+            <Transition
+                items={hasResults}
+                from={{ opacity: 0, transform: 'translateY(2000px)'}}
+                enter={{ opacity: 1, transform: 'translateY(0px)' }}
+                leave={{ opacity: 0, transform: 'translateX(0px)'}}
+            >
+                {hasResults =>
+                    hasResults
+                        ? props =>
+                            <div className="search-results-page-results-grid" style={props}>
+                                {
+                                    filteredSearchData.map(
+                                        page => (
+                                            <SearchResult
+                                                key={page.ID}
+                                                id={page.ID}
+                                                title={page.Title}
+                                                summary={page.Summary}
+                                                category={page.Category}
+                                            />
+                                        )
+                                    )
+                                }
+                            </div>
+                        : props =>
+                            <div className="search-results-page-no-results" style={props}>
+                                <p>Sorry, we couldn't find any information matching your query. Please try again.</p>
+                            </div>
                 }
-            </div>
+            </Transition>
         </section>
     );
 }

@@ -26,8 +26,6 @@ export default function Main() {
     );
 }
 
-/* these two functions should really be moved to their own files, even though this is the only component they are used in. */
-
 export const ScrollToTop = ({ children, location }) => {
     //ensures that the scroll position will always begin at the top when a route changes 
     React.useLayoutEffect(() => window.scrollTo(0, 0), [location.pathname]);

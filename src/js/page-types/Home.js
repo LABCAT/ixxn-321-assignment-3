@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from 'react';
+import { useHistory } from "react-router-dom";
 import { Transition } from 'react-spring/renderprops';
 
 
@@ -8,11 +8,26 @@ import Graph from '../components/Graph';
 import GraphMobile from '../components/GraphMobile';
 import SearchForm from '../components/SearchForm.js';
 
+import { Context } from '../context/Context.js';
 import * as Constants from '../context/Constants.js';
 
 export default function Home() {
+    let history = useHistory();
+    const { currentSearchQuery, setSearchQuery } = useContext(Context);
     const [showMapSection, setShowMapSection] = useState(false);
     const handleClick = () => setShowMapSection(!showMapSection);
+
+    const handleCategoryClick = (category) => {
+
+        setSearchQuery(
+            {
+                "keyword": currentSearchQuery.keyword,
+                "category": category ? category : 'All'
+            }
+        );
+        const searchRoute = '/search/keyword=' + encodeURI(currentSearchQuery.keyword) + '/category=' + encodeURI(category ? category : 'All');
+        history.push(searchRoute);
+    };
 
 
     return (
@@ -58,7 +73,7 @@ export default function Home() {
                                             }
                                         ).map(
                                             category => (
-                                                <Link to={`/search/category=${category.title}`}>
+                                                <button onClick={() => handleCategoryClick(category.title)} key={category.title}>
                                                     <div className="image-holder">
                                                         <img
                                                             src={require(`../../images/${category.title}.png`)}
@@ -66,7 +81,7 @@ export default function Home() {
                                                         />
                                                     </div>
                                                     <h2>{category.title}</h2>
-                                                </Link>
+                                                </button>
                                             )
                                         )
                                     }

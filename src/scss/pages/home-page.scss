@@ -98,10 +98,11 @@
       max-width: 100%;
     }
 
-    a {
+    button {
       max-width: 364px;
       margin-bottom: 2rem;
       text-align: left;
+      background: transparent;
 
       @include media(min-md){
         width: 50%;

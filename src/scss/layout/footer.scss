@@ -16,16 +16,10 @@ color: white;
 text-decoration: none;
 display: table;
 font-family: "Verdana","Arial Black";
+
 }
 
-.footer-content a {
-color: white;
-text-decoration: none;
-display: table;
-font-family: "Verdana","Arial Black";
-}
-
-.footer-content li{
+.footer-content button{
 
   height: 100%;
   display: table-cell;
@@ -33,10 +27,12 @@ font-family: "Verdana","Arial Black";
   vertical-align: middle;
   text-align: center;
   font-family: "Verdana","Arial Black",sans-serif;
+  background: transparent;
+  padding: 0;
 }
 
 
-.footer-content a li:hover {
+.footer-content button:hover {
    color: #ffc442;
    transition: all 0.5s ease-in;
 }
@@ -45,7 +41,7 @@ font-family: "Verdana","Arial Black";
 
 .footer-container{
   width: 60%;
-  height: 25em;
+  height: 20em;
   display: block;
   margin: 0 auto;
 
@@ -57,7 +53,7 @@ font-family: "Verdana","Arial Black";
 
 .footer-col{
 float: left;	
-width: 33.33%;
+width: 50%;
 height: 100%;
 margin-left: 0px;
 margin-right: 0px;
@@ -134,7 +130,7 @@ ul {
 @media screen and (max-width: 760px) {
 .footer-container{
   width: 60%;
-  height: 60em;
+  height: 30em;
   display: block;
   margin: 0 auto;
   padding-top:2em;
@@ -144,7 +140,7 @@ ul {
 .footer-col{
 float: none;	
 width: 100%;
-height: 20em;
+height: 18em;
 margin-left: 0px;
 margin-right: 0px;
 text-align: center;
@@ -179,4 +175,62 @@ margin: 0px;
   font-size: 12px;
 
 }
+
+}
+
+@media screen and (max-width: 320px) {
+.footer-nav{
+  width: 60%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  float: center;
+  padding-top:0em;
+  padding-bottom:8em;
+  vertical-align: middle;
+
+}
+
+.footer-nav a{
+  width: 100%;
+  height: 100%;
+  display: table;
+  float: left;
+  padding-top: 1.5em;
+  color: white;
+  text-decoration: none;
+  font-family: "Verdana","Arial Black";
+  font-size: 10px;
+
+}
+
+
+.footer-container{
+float: none;	
+width: 100%;
+height: 29.5em;
+margin-left: 0px;
+margin-right: 0px;
+text-align: center;
+}
+
+.footer-col{
+float: none;	
+width: 100%;
+height: 17em;
+margin-left: 0px;
+margin-right: 0px;
+text-align: center;
+}
+
+hr{
+width: 100%;
+border-color: #ffc442;
+align-items: center;
+padding: 0px;
+margin-bottom: 0px;
+margin-top:0px;
+}
+
+
 }

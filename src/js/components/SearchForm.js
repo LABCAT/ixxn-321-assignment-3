@@ -13,7 +13,6 @@ export default function SearchForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(category);
         
         setSearchQuery(
             {

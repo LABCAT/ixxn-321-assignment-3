@@ -12,7 +12,7 @@ export default function Graph() {
         { x: "", y: Deceased },
         { name: Region }
     ]
-    
+
     const handleOnCLick = (region) => {
         setRegion(region);
     };
@@ -27,25 +27,20 @@ export default function Graph() {
     }
 
     //Shows the reset button when a region is selected
-    function resetButton(regionName){
-        if(regionName !== "Nationwide"){
-            return(
+    function resetButton(regionName) {
+        if (regionName !== "Nationwide") {
+            return (
                 <a href="/" onClick={(e) => { e.preventDefault(); handleOnCLick("Nationwide") }}>
-                    <VictoryLabel
-                        textAnchor="middle"
-                        verticalAnchor="middle"
-                        x={200} y={380}
-                        style={{ fill: '#009EBF', fontSize: 22, fontWeight: '100', fontFamily: 'Lato'}}
-                        text={'Reset to Nationwide'}
-                    />
+                    <button className="reset-button" type="submit">Reset to Nationwide</button>
                 </a>
             )
-        }else{
+        } else {
             return
         }
     }
 
     return (
+        <span>
             <svg width="50%" height="50%" viewBox="0 0 400 400" style={{ marginBottom: "2vw" }}>
                 <VictoryPie
                     standalone={false}
@@ -96,8 +91,11 @@ export default function Graph() {
                     style={{ fill: '#FF6767', fontSize: 26, fontWeight: '100', fontFamily: 'Lato' }}
                     text={'Deceased'}
                 />
-                {resetButton(data[2].name)}
+
+
             </svg>
+            {resetButton(data[2].name)}
+        </span>
     )
 }
 

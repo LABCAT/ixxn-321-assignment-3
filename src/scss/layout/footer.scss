@@ -19,7 +19,7 @@ font-family: "Verdana","Arial Black";
 
 }
 
-.footer-content li{
+.footer-content button{
 
   height: 100%;
   display: table-cell;
@@ -27,10 +27,12 @@ font-family: "Verdana","Arial Black";
   vertical-align: middle;
   text-align: center;
   font-family: "Verdana","Arial Black",sans-serif;
+  background: transparent;
+  padding: 0;
 }
 
 
-.footer-content li:hover {
+.footer-content button:hover {
    color: #ffc442;
    transition: all 0.5s ease-in;
 }

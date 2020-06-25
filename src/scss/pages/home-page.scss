@@ -226,8 +226,9 @@
       display: none;
     }
     .big-graph{
-
       .reset-button{
+        position: relative;
+        z-index: 1;
         float: right;
         width: 15vw;
         margin-top: -4vw;

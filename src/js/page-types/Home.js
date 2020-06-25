@@ -42,9 +42,9 @@ export default function Home() {
             <div className="home-page-transition-holder" id="transition-holder">
                 <Transition
                     items={showMapSection}
-                    from={{ opacity: 1, transform: 'translateX(2000px)', position: 'absolute' }}
+                    from={{ opacity: 0, transform: 'translateX(2000px)', position: 'absolute' }}
                     enter={{ opacity: 1, transform: 'translateX(0px)', position: 'relative' }}
-                    leave={{ opacity: 1, transform: 'translateX(-2000px)', position: 'absolute' }}
+                    leave={{ opacity: 0, transform: 'translateX(-2000px)', position: 'absolute' }}
                 >
                     {showMapSection =>
                         showMapSection

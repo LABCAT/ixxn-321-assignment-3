@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import { Transition } from 'react-spring/renderprops';
 
@@ -15,7 +15,8 @@ export default function Home() {
     let history = useHistory();
     const { currentSearchQuery, setSearchQuery } = useContext(Context);
     const [showMapSection, setShowMapSection] = useState(false);
-    const handleClick = () => setShowMapSection(!showMapSection);
+
+    const handleClick = () =>  setShowMapSection(!showMapSection);
 
     const handleCategoryClick = (category) => {
 
@@ -29,7 +30,6 @@ export default function Home() {
         history.push(searchRoute);
     };
 
-
     return (
         <section className="home-page">
             <label className="home-page-switch">
@@ -39,56 +39,59 @@ export default function Home() {
                 />
                 <span className="home-page-slider round"></span>
             </label>
-            <Transition
-                items={showMapSection}
-                from={{ opacity: 0, transform: 'translateX(2000px)' }}
-                enter={{ opacity: 1, transform: 'translateX(0px)' }}
-                leave={{ opacity: 0, transform: 'translateX(-2000px)' }}>
-                {showMapSection =>
-                    showMapSection
-                        ? props =>
-                            <div className="home-page-map-section" style={props}>
-                                <div className="home-page-map-section-column">
-                                    <div class="mobile-graph">
-                                        <GraphMobile />
-                                        <NZMap />
-                                    </div>
-                                    <div class="big-graph">
-                                        <NZMap />
-                                        <Graph />
+            <div className="home-page-transition-holder" id="transition-holder">
+                <Transition
+                    items={showMapSection}
+                    from={{ opacity: 1, transform: 'translateX(2000px)', position: 'absolute' }}
+                    enter={{ opacity: 1, transform: 'translateX(0px)', position: 'relative' }}
+                    leave={{ opacity: 1, transform: 'translateX(-2000px)', position: 'absolute' }}
+                >
+                    {showMapSection =>
+                        showMapSection
+                            ? props =>
+                                <div className="home-page-map-section" id="map-section" style={props}>
+                                    <div className="home-page-map-section-column">
+                                        <div className="mobile-graph">
+                                            <GraphMobile />
+                                            <NZMap />
+                                        </div>
+                                        <div className="big-graph">
+                                            <NZMap />
+                                            <Graph />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        : props =>
-                            <div className="home-page-search-section" style={props}>
-                                <SearchForm />
-                                <div className="home-page-search-section-quick-links">
-                                    {
-                                        Constants.categories.filter(
-                                            function (category) {
-                                                if (category.value === "All") {
-                                                    return false;
+                            : props =>
+                                <div className="home-page-search-section" id="search-section" style={props}>
+                                    <SearchForm />
+                                    <div className="home-page-search-section-quick-links">
+                                        {
+                                            Constants.categories.filter(
+                                                function (category) {
+                                                    if (category.value === "All") {
+                                                        return false;
+                                                    }
+                                                    return true;
                                                 }
-                                                return true;
-                                            }
-                                        ).map(
-                                            category => (
-                                                <button onClick={() => handleCategoryClick(category.title)} key={category.title}>
-                                                    <div className="image-holder">
-                                                        <img
-                                                            src={require(`../../images/${category.title}.png`)}
-                                                            alt={category.title}
-                                                        />
-                                                    </div>
-                                                    <h2>{category.title}</h2>
-                                                </button>
+                                            ).map(
+                                                category => (
+                                                    <button onClick={() => handleCategoryClick(category.title)} key={category.title}>
+                                                        <div className="image-holder">
+                                                            <img
+                                                                src={require(`../../images/${category.title}.png`)}
+                                                                alt={category.title}
+                                                            />
+                                                        </div>
+                                                        <h2>{category.title}</h2>
+                                                    </button>
+                                                )
                                             )
-                                        )
-                                    }
+                                        }
+                                    </div>
                                 </div>
-                            </div>
-                }
-            </Transition>
+                    }
+                </Transition>
+            </div>
         </section>
     );
 }

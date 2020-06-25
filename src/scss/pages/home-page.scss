@@ -70,6 +70,14 @@
     border-radius: 50%;
   }
 
+  &-transition-holder {
+    position: relative;
+  }
+
+  &-search-section, &-map-section {
+    top: 0;
+  }
+
   &-search-section-quick-links {
     display: flex;
     flex-wrap: wrap;
@@ -99,10 +107,12 @@
     }
 
     button {
+      align-self: flex-start;
       max-width: 364px;
       margin-bottom: 2rem;
       text-align: left;
       background: transparent;
+      padding: 0;
 
       @include media(min-md){
         width: 50%;

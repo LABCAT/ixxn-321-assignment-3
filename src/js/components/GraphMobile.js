@@ -26,7 +26,7 @@ export default function Graph() {
                         textAnchor="middle"
                         verticalAnchor="middle"
                         x={500} y={220}
-                        style={{ fill: '#005D70', fontSize: 36, fontWeight: '100', fontFamily: 'Lato' }}
+                        style={{ fill: '#009EBF', fontSize: 36, fontWeight: '100', fontFamily: 'Lato'}}
                         text={'Reset to Nationwide'}
                     />
                 </a>
